@@ -20,7 +20,7 @@ module.exports.get = function(options) {
 				// content-type
 				if (!this.get('Content-Type'))
 					this.set('Content-Type', 'application/json');
-				this.send(body);
+				return this.send(body);
 			};
 			res.jsonp = function(obj) {
 				// settings
@@ -54,6 +54,7 @@ module.exports.get = function(options) {
 					// the typeof check is just to reduce client error noise
 					body = '/**/ typeof ' + callback + ' === \'function\' && ' + callback + '(' + body + ');';
 				}
+				return this.send(body);
 			};
 		}
 		next();

@@ -1,7 +1,7 @@
 {
   "name": "express-pretty-print",
   "description": "Pretty JSON Printer for Express",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "author": {
     "name": "Wen Chang",
     "email": "wchang28@hotmail.com"
